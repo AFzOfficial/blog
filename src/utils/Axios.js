@@ -1,0 +1,34 @@
+import axios from 'axios'
+
+const BASE_URL = 'https://api.pycloud.space/'
+
+export const getRequest = async (url, config) => {
+
+  const response = await axios.get(`${BASE_URL}${url}`, config);
+
+  return response;
+}
+
+
+
+
+export const postRequest = async (url, payload, config) => {
+  const response = await axios.post(`${BASE_URL}${url}`, payload, config);
+
+  return response;
+}
+
+
+
+export const delRequest = async (url) => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+    }
+  };
+
+  const response = await axios.delete(`${BASE_URL}${url}`, config);
+
+  return response;
+}
