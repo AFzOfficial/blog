@@ -14,7 +14,7 @@ function Home() {
 
             <h1 dir='auto' className="mt-6 text-2xl">ABolFazL Personal Blog</h1>
 
-            <p dir='auto' className="px-4 my-4 text-center">sometimes just about the yamete kudasai aaah</p>
+            <p dir='auto' className="px-4 my-4 text-center">sometimes just about the ABolFazl</p>
 
             <div className='grid grid-cols-3 gap-4 mb-16'>
 
