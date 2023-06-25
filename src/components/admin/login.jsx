@@ -35,7 +35,7 @@ const Login = () => {
       },
     };
 
-    postRequest('auth/token', formData, config)
+    postRequest('login/', formData, config)
       .then(response => {
         if (response.status === 200) {
           localStorage.setItem('token', response.data.access_token);

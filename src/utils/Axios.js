@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://api.pycloud.space/'
+const BASE_URL = 'http://127.0.0.1:8000/'
 // If you get origin error from API, it's because my API only works in my blog: https://blog.pycloud.space
 
 export const getRequest = async (url, config) => {

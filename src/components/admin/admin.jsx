@@ -30,7 +30,7 @@ const Admin = () => {
         }
       };
 
-      getRequest('auth/verify', config)
+      getRequest('login/verify/', config)
         .catch(error => {
           if (error.response.status === 401) {
             localStorage.removeItem('token');
@@ -60,9 +60,11 @@ const Admin = () => {
         },
       };
 
-      postRequest('posts', payload, config)
+      postRequest('posts/', payload, config)
         .then(response => {
-          setStatus(response.data.detail);
+          if (response.status === 201) {
+            setStatus('Post Created.');
+          }
         })
         .catch(error => {
           if (error.response.status === 401) {

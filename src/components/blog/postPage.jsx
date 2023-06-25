@@ -27,7 +27,7 @@ const Post = () => {
 
     getRequest(`posts/${id}`, config)
       .then(response => setData(response.data))
-      .catch(error => setError(error.response.data.detail))
+      .catch(error => setError(error.message))
       .finally(() => {
         setTimeout(() => {
           setLoading(false);
@@ -40,7 +40,7 @@ const Post = () => {
   const handleDeletePost = () => {
     delRequest(`posts/${id}`)
       .then((response) => {
-        if (response.status === 201) {
+        if (response.status === 204) {
           navigate('/logs');
         }
       }).catch(error => {

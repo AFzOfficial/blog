@@ -19,7 +19,7 @@ const Posts = () => {
 
     setLoading(true);
 
-    getRequest('posts', config)
+    getRequest('posts/', config)
       .then(response => setData(response.data))
       .catch(error => setError(error.response.data.detail))
       .finally(() => {
@@ -44,7 +44,7 @@ const Posts = () => {
           {
             data.length > 0 ?
               data.map((post) => (
-                <PostCard key={post.id} id={post.id} title={post.title} content={post.content} date={post.date} />
+                <PostCard key={post.id} id={post.id} title={post.title} content={post.content} date={post.formatted_date} />
               )) :
               <p className='text-center'>Nothing...</p>
           }
