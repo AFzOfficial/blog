@@ -4,6 +4,8 @@ import { Footer } from '../index'
 
 import { FaGithub, FaDiscord, FaInstagram, FaLinkedinIn, FaTwitter, FaDev, FaTelegramPlane, FaGitlab } from 'react-icons/fa'
 import { FiCoffee } from 'react-icons/fi'
+import { HiMiniArrowSmallRight } from 'react-icons/hi2'
+
 
 function Home() {
     return (
@@ -49,8 +51,9 @@ function Home() {
 
 
             <Link to={'/logs'}>
-                <button className="sm:hidden text-gray-100 px-12 py-2 rounded-full border border-zinc-700 transition hover:bg-gray-100 hover:text-black">
+                <button className="sm:hidden flex items-center text-gray-100 px-10 py-1.5 rounded-lg border border-zinc-700 transition hover:bg-gray-100 hover:text-black">
                     Logs
+                    <HiMiniArrowSmallRight />
                 </button>             
             </Link>
 
