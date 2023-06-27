@@ -15,18 +15,18 @@ const Navbar = () => {
     <nav className="max-w-screen-xl mx-auto h-14 px-6 p-4 flex justify-between items-center border-b border-zinc-800">
 
       <div className='flex justify-start items-center'>
-        <h2 className='text-2xl font-bold'>Afzlog</h2>
+        <h2 className='text-2xl font-semibold'>AFz</h2>
       </div>
 
-      <ul className='list-none font-medium hidden sm:flex justify-end items-center flex-1 space-x-4'>
+      <ul className='list-none text-sm font-medium hidden sm:flex justify-end items-center flex-1 space-x-4'>
         <li>
           <NavLink className='hover:text-blue-500 transition duration-100' to={'/'}>
-            Home
+            HOME
           </NavLink>
         </li>
         <li>
           <NavLink className='hover:text-blue-500 transition duration-100' to={'/logs'}>
-            Blog
+            LOGS
           </NavLink>
         </li>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
           <>
             <li>
               <NavLink className='hover:text-blue-500 transition duration-100' to={'/admin'}>
-                Dashboard
+                DASHBOARD
               </NavLink>
             </li>
             <li>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 localStorage.removeItem('token');
                 navigate('/')
               }}>
-                Logout
+                LOGOUT
               </span>
             </li>
           </>
@@ -61,7 +61,7 @@ const Navbar = () => {
 
 
         <div className={`${toggleMenu ? 'flex' : 'hidden'} p-6 bg-zinc-900 absolute top-16 right-4 px-2 py-4 min-w-[140px] rounded`}>
-          <ul className="space-y-2 w-[180px]">
+          <ul className="space-y-2 w-[180px] text-sm font-medium">
             <li>
               <NavLink to={'/'} onClick={() => setToggleMenu(setToggleMenu(false))} className="flex items-center p-2 text-gray-50 hover:bg-zinc-800/50 rounded-lg ">
                 <HiOutlineHome className="w-6 h-6  transition duration-75 text-gray-400" />
@@ -71,7 +71,7 @@ const Navbar = () => {
             <li>
               <NavLink to={'/logs'} onClick={() => setToggleMenu(setToggleMenu(false))} className="flex items-center p-2 text-gray-50 hover:bg-zinc-800/50 rounded-lg ">
                 <HiOutlineNewspaper className="flex-shrink-0 w-6 h-6  transition duration-75 text-gray-400" />
-                <span className="flex-1 ml-3 whitespace-nowrap">Blog</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Logs</span>
 
               </NavLink>
             </li>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <li>
                   <NavLink to={'/admin'} onClick={() => setToggleMenu(setToggleMenu(false))} className="flex items-center p-2 text-gray-50 hover:bg-zinc-800/50 rounded-lg ">
                     <RxDashboard className="flex-shrink-0 w-6 h-6  transition duration-75 text-gray-400" />
-                    <span className="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Dashborad</span>
 
                   </NavLink>
                 </li>
