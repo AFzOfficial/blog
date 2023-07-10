@@ -54,7 +54,7 @@ const Post = () => {
   }
 
   return (
-    <div className="container max-w-screen-md flex flex-col justify-center items-center mx-auto mt-4">
+    <div className="max-w-screen-md flex flex-col justify-center items-center mx-auto mt-4 min-h-screen">
 
       {loading &&
         <p>Loading The Post..</p>

@@ -88,7 +88,7 @@ const Admin = () => {
   return (
 
 
-    <div className="p-4 flex flex-col justify-center items-center gap-6 mx-auto">
+    <div className="p-4 flex flex-col justify-center items-center gap-6 mx-auto min-h-screen">
 
       {status &&
         <p className="text-red-500"> {status} </p>

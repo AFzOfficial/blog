@@ -33,7 +33,7 @@ const Posts = () => {
 
   return (
 
-    <div className='flex flex-col justify-center items-center p-4'>
+    <div className='flex flex-col justify-center items-center p-4 min-h-screen'>
 
       {loading &&
         <p>Loading Posts..</p>

@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 
-import { Footer } from '../index'
-
 import { FaGithub, FaDiscord, FaInstagram, FaLinkedinIn, FaTwitter, FaDev, FaTelegramPlane, FaGitlab } from 'react-icons/fa'
 import { FiCoffee } from 'react-icons/fi'
 import { HiMiniArrowSmallRight } from 'react-icons/hi2'
@@ -10,7 +8,7 @@ import { HiMiniArrowSmallRight } from 'react-icons/hi2'
 function Home() {
     return (
         <>
-        <div className="max-w-screen-lg h-screen mx-auto flex flex-col justify-center items-center px-2">
+        <div className="max-w-screen-lg h-screen mx-auto flex flex-col justify-center items-center px-2 min-h-screen">
 
             <img src="./img/avatar.webp" alt="photo" className="w-32 h-32 rounded-full mt-10 border-2 border-zinc-800" />
 
@@ -59,7 +57,6 @@ function Home() {
 
         </div>
 
-<Footer />
 </>
     )
 }

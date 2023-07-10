@@ -53,8 +53,8 @@ const Login = () => {
 
 
   return (
-    <div className="max-w-screen-lg flex justify-center mx-auto mt-12">
-      <form className="px-4 w-80">
+    <div className="max-w-screen-lg flex justify-center items-center mx-auto min-h-screen">
+      <form className="px-4 w-80 -mt-28">
 
         <div className="flex justify-center flex-col gap-8">
           {error &&

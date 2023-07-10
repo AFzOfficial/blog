@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Navbar, Posts, Post, NotFound, Admin, Login, Home } from './components'
+import { Navbar, Posts, Post, NotFound, Admin, Login, Home, Footer } from './components'
 
 function App() {
 
@@ -21,6 +21,9 @@ function App() {
       <Route path='*' element={<NotFound />} />
 
     </Routes>    
+
+    <Footer />
+
     </BrowserRouter>
   )
 }
