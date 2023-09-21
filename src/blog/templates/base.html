@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta itemprop="name" content="ABolFazl Badie | Blog">
+    <meta name="application-name" content="ABolFazl Badie | Blog">
+    <meta name="twitter:title" content="ABolFazl Badie | Blog">
+    <meta property="og:site_name" content="ABolFazl Badie | Blog">
+    <meta property="og:title" content="ABolFazl Badie | Blog" />
+    <meta itemprop="description" content="a Software Engineer, Started Self-learning from 2020, Interested in Python, Linux and Network.">
+    <meta name="description" content="a Software Engineer, Started Self-learning from 2020, Interested in Python, Linux and Network.">
+    <meta name="twitter:description" content="a Software Engineer, Started Self-learning from 2020, Interested in Python, Linux and Network.">
+    <meta property="og:description" content="a Software Engineer, Started Self-learning from 2020, Interested in Python, Linux and Network." />
+    <meta name="keywords" content="abolfazl badie, abolfazlbadie, abolfazl badie blog, badie, blog">
+    <meta itemprop="image" content="{% static 'img/logo.png' %}">
+    <meta property="og:image" content="{% static 'img/logo.png' %}" />
+    <meta name="twitter:image" content="{% static 'img/logo.png' %}">
+    <meta name="twitter:image:src" content="{% static 'img/logo.png' %}">
+    <meta name="url" content="https://blog.pycloud.space">
+    <meta name="twitter:url" content="https://blog.pycloud.space">
+    <meta property="og:url" content="https://blog.pycloud.space" />
+    <meta property="og:type" content="website" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+
+    <title itemprop="name">{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+</head>
+
+<body class="bg-[#010409] text-gray-300">
+
+    <!-- <nav class="bg-zinc-900 w-full p-3 shadow-md">
+
+        <div class="max-w-screen-2xl mx-auto p-1 flex justify-between items-center gap-3">
+            
+            <div class="hidden lg:flex justify-center items-center">
+                <ul class="flex gap-4 text-zinc-900 text-base">
+                    <li><a href="{% url 'index' %}" class="hover:text-blue-500 transition">Home</a></li>
+                    <li><a href="{% url 'index' %}" class="hover:text-blue-500 transition">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav> -->
+
+    {% block content %}
+    {% endblock content %}
+
+
+    <footer class="p-6 flex items-center justify-center text-center">
+        <span class="text-sm">© 2023 ABolFazl Badie</span>
+    </footer>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
