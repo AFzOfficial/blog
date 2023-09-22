@@ -6,7 +6,7 @@ from .models import Post
 
 def index(request, page: int = 1):
     posts = Post.objects.all().order_by('-created_at', )
-    paginator = Paginator(posts, 1)
+    paginator = Paginator(posts, 10)
     page_object = paginator.get_page(page)
     page_object.adjusted_elided_pages = paginator.get_elided_page_range(page)
 
