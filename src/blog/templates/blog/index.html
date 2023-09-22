@@ -56,9 +56,9 @@
         </a>
     {% endif%}
 
-    <a>{{posts.number}} of {{posts.paginator.num_pages}}</a>
-
     {% if posts.has_next %}
+        <span>{{ posts.number }} of {{ posts.paginator.num_pages }}</span>
+
         <a href="{% url 'index' posts.next_page_number %}">
             <button class="px-5 py-1.5 transition border-2 border-zinc-900 hover:bg-zinc-900">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
