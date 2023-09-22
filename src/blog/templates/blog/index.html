@@ -27,7 +27,7 @@
         </p>
 
         <div dir="auto" class="mt-4">
-            <a href="{% url 'detail'  post.id %}"
+            <a href="{% url 'detail' post.id %}"
                 class="text-[14.4px] border-2 border-zinc-900 py-2.5 px-7 font-bold hover:bg-zinc-900 transition">
                 READ MORE
             </a>
@@ -35,6 +35,71 @@
     </div>
     {% endfor %}
     {% endif %}
+
+
+    <div class="flex justify-center flex-wrap items-center gap-3 py-10">
+
+        {% if posts.has_previous %}
+        <!-- <a href="{% url 'index' 1 %}">
+            <button class="px-5 py-1.5 transition border-2 border-zinc-900 hover:bg-zinc-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+                  </svg>                  
+            </button>
+        </a> -->
+        <a href="{% url 'index' posts.previous_page_number %}">
+            <button class="px-5 py-1.5 transition border-2 border-zinc-900 hover:bg-zinc-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>                  
+            </button>
+        </a>
+    {% endif%}
+
+    <a>{{posts.number}} of {{posts.paginator.num_pages}}</a>
+
+    {% if posts.has_next %}
+        <a href="{% url 'index' posts.next_page_number %}">
+            <button class="px-5 py-1.5 transition border-2 border-zinc-900 hover:bg-zinc-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>                                  
+            </button>
+        </a>
+        <!-- <a href="{% url 'index' posts.paginator.num_pages %}">
+            <button class="px-5 py-1.5 transition border-2 border-zinc-900 hover:bg-zinc-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                  </svg>                  
+            </button>
+        </a> -->
+    {% endif%}
+
+    <!--
+
+    {% for page_number in posts.paginator.page_range %}
+            <a
+            href="{% url 'index' page_number %}"
+            class="{% if page_number == posts.number %} bg-blue-600 border-blue-600 {% else %} border-zinc-900 hover:bg-zinc-900 {% endif %} py-1.5 px-4 flex items-center border-2 font-bold"
+        >
+            {{ page_number }}
+        </a>
+    {% endfor %} -->
+
+        <!-- {% for page_number in posts.adjusted_elided_pages %}
+        {% if page_number == posts.paginator.ELLIPSIS %}
+            {{ page_number }}
+        {% else %}
+            <a
+                href="{% url 'index' page_number %}"
+                class="{% if page_number == posts.number %} bg-blue-600 border-blue-600 {% else %} border-zinc-900 hover:bg-zinc-900 {% endif %} py-1.5 px-4 flex items-center border-2 font-bold"
+            >
+                {{ page_number }}
+            </a>
+        {% endif %}
+    {% endfor %} -->
+
+    </div>
 
 </section>
 
