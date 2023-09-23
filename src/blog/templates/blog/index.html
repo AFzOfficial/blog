@@ -9,7 +9,7 @@
 
     {% if posts %}
     {% for post in posts %}
-    <div dir="auto" class="flex flex-col gap-3">
+    <div dir="auto" class="flex flex-col gap-3 p-7">
         <img src="{{ post.banner.url }}" alt="Banner" class="w-full rounded-lg">
 
         <span dir="auto" class="text-blue-500 mt-4 text-[16px] flex items-center gap-2">
@@ -20,7 +20,7 @@
             {{ post.created_at|naturaltime }}
         </span>
 
-        <h1 dir="auto" class="text-[32px] font-medium text-white">{{ post.title }}</h1>
+        <h1 dir="auto" class="text-[26px] lg:text-[32px] text-white">{{ post.title }}</h1>
 
         <p class="text-[15px] text-[#EEEEEC] leading-7 text-justify">
             {{ post.description }}

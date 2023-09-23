@@ -9,7 +9,7 @@
 
 <section dir="auto" class="max-w-screen-md min-h-screen mx-auto p-4 flex justify-center py-16">
 
-    <div dir="auto" class="flex flex-col gap-3 w-full">
+    <div dir="auto" class="flex flex-col gap-3 w-full p-1">
         <img src="{{ post.banner.url }}" alt="Banner" class="w-full rounded-lg">
 
         <span dir="auto" class="text-blue-500 mt-4 text-[16px] flex items-center gap-2">
@@ -20,14 +20,14 @@
             {{ post.created_at|naturaltime }}
         </span>
 
-        <h1 dir="auto" class="text-[32px] text-white font-bold">{{ post.title }}</h1>
+        <h1 dir="auto" class="text-[26px] lg:text-[32px] text-white">{{ post.title }}</h1>
 
-        <div class="prose prose-invert prose-pre:bg-gray-900 prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-code:text-[16px]">{{ post.body | markdown | safe }}</div>
+        <div class="prose prose-invert prose-pre:bg-gray-900 prose-a:text-blue-500 hover:prose-a:text-blue-600 prose-code:text-[16px]">{{ post.body | markdown | safe }}</div>
 
     </div>
 
     <div class="fixed bottom-4 left-4">
-        <a href="{% url 'index' %}" class="p-2 rounded-full bg-zinc-900 border border-zinc-800 shadow-md flex">
+        <a href="{% url 'index' %}" class="p-2 rounded-full bg-zinc-800 border border-zinc-700 shadow-md flex">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
