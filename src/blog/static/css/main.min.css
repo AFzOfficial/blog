@@ -1132,6 +1132,14 @@ video {
   max-width: 768px;
 }
 
+.max-w-screen-lg{
+  max-width: 1024px;
+}
+
+.max-w-none{
+  max-width: none;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1431,6 +1439,10 @@ textarea,
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.prose-p\:w-full :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))){
+  width: 100%;
+}
+
 .prose-a\:text-blue-500 :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))){
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -1448,6 +1460,10 @@ textarea,
 .prose-pre\:bg-gray-900 :is(:where(pre):not(:where([class~="not-prose"],[class~="not-prose"] *))){
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.prose-lead\:w-full :is(:where([class~="lead"]):not(:where([class~="not-prose"],[class~="not-prose"] *))){
+  width: 100%;
 }
 
 @media (min-width: 1024px){

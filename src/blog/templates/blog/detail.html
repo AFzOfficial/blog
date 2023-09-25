@@ -7,9 +7,9 @@
 
 {% block content %}
 
-<section dir="auto" class="max-w-screen-md min-h-screen mx-auto p-4 flex justify-center py-16">
+<section dir="auto" class="max-w-screen-md min-h-screen w-full mx-auto p-4 flex justify-center py-16">
 
-    <div dir="auto" class="flex flex-col gap-3 w-full p-1">
+    <div dir="auto" class="w-full flex flex-col gap-3 p-1">
         <img src="{{ post.banner.url }}" alt="Banner" class="w-full rounded-lg">
 
         <span dir="auto" class="text-blue-500 mt-4 text-[16px] flex items-center gap-2">
@@ -20,9 +20,9 @@
             {{ post.created_at|naturaltime }}
         </span>
 
-        <h1 dir="auto" class="text-[26px] lg:text-[32px] text-white">{{ post.title }}</h1>
+        <h1 dir="auto" class="w-full text-[26px] lg:text-[32px] text-white">{{ post.title }}</h1>
 
-        <div class="prose prose-invert prose-pre:bg-gray-900 prose-a:text-blue-500 hover:prose-a:text-blue-600 prose-code:text-[16px]">{{ post.body | markdown | safe }}</div>
+        <div class="prose prose-invert max-w-none prose-pre:bg-gray-900 prose-a:text-blue-500 hover:prose-a:text-blue-600 prose-code:text-[16px]">{{ post.body | markdown | safe }}</div>
 
     </div>
 
