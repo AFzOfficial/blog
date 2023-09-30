@@ -19,6 +19,7 @@ body {
 code,
 pre {
   font-family: 'JetBrains Mono';
+  direction: ltr;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera
