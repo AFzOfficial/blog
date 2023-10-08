@@ -27,4 +27,5 @@ pip install -r requirements.txt
 ### Run Development Server
 ```bash
 python3 manage.py runserver
-```
+```  
+Open [127.0.0.1:8000](http://127.0.0.1:8000) in your browser
