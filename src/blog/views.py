@@ -15,4 +15,10 @@ def index(request, page: int = 1):
 
 def detail(request, id: int):
     post = Post.objects.get(id=id)
+
+    ip_address = request.user.ip_address
+    if ip_address not in post.hits.all():
+        post.hits.add(ip_address)
+        post.save()
+
     return render(request, 'blog/detail.html', {'post': post})
